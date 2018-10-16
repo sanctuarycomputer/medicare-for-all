@@ -1,0 +1,13 @@
+@import 'settings';
+
+.App {
+  max-width: 100vw;
+}
+
+.serif {
+  font-family: $font-serif;
+}
+
+.sans-serif {
+  font-family: $font-sans-serif;
+}

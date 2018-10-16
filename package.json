@@ -3,18 +3,51 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "basement": "https://github.com/sanctuarycomputer/basement.git",
+    "lodash": "^4.17.11",
+    "node-sass": "^4.9.4",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "autoprefixer": "^9.2.0",
+    "babel-plugin-react-css-modules": "^3.4.2",
+    "babel-preset-react-app": "^5.0.4",
+    "browser-env": "^3.2.5",
+    "classnames": "^2.2.6",
+    "css-loader": "^1.0.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "husky": "^1.1.2",
+    "lint-staged": "^7.3.0",
+    "postcss-clean": "^1.1.0",
+    "postcss-cli": "^6.0.0",
+    "postcss-scss": "^2.0.0",
+    "prettier": "1.14.3",
+    "react-app-rewired": "^1.6.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
+  },
+  "prettier": {
+    "useTabs": false,
+    "printWidth": 80,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "jsxBracketSameLine": false
+  },
+  "lint-staged": {
+    "*.{js,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "browserslist": [
     ">0.2%",
