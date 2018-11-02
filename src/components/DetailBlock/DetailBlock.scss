@@ -1,0 +1,40 @@
+@import 'settings';
+
+.DetailBlock {
+  &__text1-container {
+    border: spacing(0.2) solid color('gray');
+    @media ($medium-up) {
+      margin-top: spacing(70);
+      min-width: spacing(80);
+    }
+  }
+
+  &__image2-container {
+    @media ($medium-up) {
+      position: absolute;
+      top: 0;
+      right: 15%;
+    }
+  }
+
+  &__image2 {
+    @media ($medium-up) {
+      min-width: spacing(140);
+    }
+  }
+
+  &__image3 {
+    @media ($medium-up) {
+      margin-top: spacing(50);
+      min-width: spacing(80);
+    }
+  }
+
+  &__text2-container {
+    border: spacing(0.2) solid color('gray');
+    @media ($medium-up) {
+      margin-top: spacing(60);
+      min-width: spacing(70);
+    }
+  }
+}

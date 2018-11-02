@@ -1,9 +1,8 @@
-$screen-s: 40rem;
-$screen-m: 52rem;
-$screen-l: 64rem;
-$screen-xl: 76rem;
-
-$small-up: "min-width: #{$screen-s}";
+$screen-s: 640px;
+$screen-m: 832px;
+$screen-l: 1024px;
+$screen-xl: 1152px;
+ $small-up: "min-width: #{$screen-s}";
 $small-down: "max-width: #{$screen-m}";
 $medium-up: "min-width: #{$screen-m}";
 $medium-down: "max-width: #{$screen-l}";
