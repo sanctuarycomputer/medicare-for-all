@@ -1,0 +1,17 @@
+@import 'settings';
+
+.Hero {
+
+  &__background-image {
+    background:  url('/assets/image-blue-circle-small.svg') no-repeat center;
+    background-size: contain;
+
+    @media ($medium-up) {
+      background:  url('/assets/image-blue-circle-medium.svg') no-repeat center;
+    }
+
+    @media ($large-up) {
+      background:  url('/assets/image-blue-circle-large.svg') no-repeat center;
+    }
+  }
+}
