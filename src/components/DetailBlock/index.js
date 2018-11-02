@@ -3,7 +3,7 @@ import cx from 'classnames';
 
 import styles from './DetailBlock.scss';
 
-class App extends Component {
+class DetailBlock extends Component {
   render() {
     return (
       <div className="flex flex-col items-center p2 content-width mxauto">
@@ -62,4 +62,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default DetailBlock;
