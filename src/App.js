@@ -6,7 +6,9 @@ import Hero from './components/Hero';
 class App extends Component {
   render() {
     return (
-      <Hero clssName='app' />
+      <div className='app'>
+        <Hero />
+      </div>
     );
   }
 }
