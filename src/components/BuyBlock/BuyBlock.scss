@@ -7,7 +7,7 @@
   &__container {
     flex-direction: column;
 
-    @media($large-up) {
+    @media($medium-up) {
       flex-direction: row;
     }
   }
