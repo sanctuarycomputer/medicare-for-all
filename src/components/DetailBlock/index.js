@@ -58,7 +58,7 @@ class DetailBlock extends Component {
           <img className={cx(styles['DetailBlock__image4'], 'col-12 md:col-5 fit-contain shadow-light my1 md:mx2')} src='/assets/image-shirt-detail-4.jpg' alt='shirt detail' />
         </div>
         <div className={cx(styles['DetailBlock__logo'], 'w100')}>
-          <img className='col-12 my4' src='/assets/sanctu-compu-logo.svg' alt='medicare' />
+          <img className='col-12 my4' src='/assets/sanctu-compu-logo.svg' alt='Sanctuary Computer Logo' />
         </div>
       </div>
     );
