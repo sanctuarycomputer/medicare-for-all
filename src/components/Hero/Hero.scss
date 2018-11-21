@@ -1,0 +1,16 @@
+@import 'settings';
+
+.Hero {
+  &__circle {
+    @include aspect-ratio(8, 15);
+    background: radial-gradient(ellipse at center, white 0%, white 60%, color('light-blue') 60%, white 70%);
+    transform: rotate(-20deg);
+    max-height: 100vh;
+
+
+    @media ($medium-up) {
+      @include aspect-ratio(15, 8);
+      transform: rotate(20deg);
+    }
+  }
+}
