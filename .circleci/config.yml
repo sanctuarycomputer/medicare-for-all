@@ -1,0 +1,31 @@
+version: 2
+jobs:
+  deploy-production:
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - run: NODE_ENV=production PUBLIC_URL=https://m4a.sanctuary.computer CI="" yarn build
+      - run: sudo apt-get install python-dev python-pip
+      - run: sudo pip install awscli
+      - run: aws configure set preview.cloudfront true
+      - run: aws s3 sync build s3://computer-sanctuary-m4a/ --delete
+      - run: aws s3 cp build/index.html s3://computer-sanctuary-m4a/ --cache-control max-age=0
+      - run: aws cloudfront create-invalidation --distribution-id E3OVAQ9MEV7B0X --paths '/*'
+
+workflows:
+  version: 2
+  build-n-deploy:
+    jobs:
+      - deploy-production:
+          filters:
+            branches:
+              only: production
