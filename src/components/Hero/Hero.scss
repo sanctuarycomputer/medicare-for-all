@@ -7,7 +7,6 @@
     transform: rotate(-20deg);
     max-height: 100vh;
 
-
     @media ($medium-up) {
       @include aspect-ratio(15, 8);
       transform: rotate(20deg);

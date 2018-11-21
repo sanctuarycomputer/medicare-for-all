@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import cx from 'classnames';
 import styles from './Hero.scss';
 
-class App extends Component {
+class Hero extends Component {
   render() {
     return (
       <div className={cx(styles['Hero'], 'vw100 vh100 relative flex flex-col items-center')}>
@@ -19,4 +19,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Hero;
