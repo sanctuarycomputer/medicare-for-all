@@ -1,9 +1,6 @@
 @import 'settings';
 
 .BuyBlock {
-  font-size: 1.5rem;
-  font-weight: 100;
-
   &__container {
     flex-direction: column;
 
@@ -22,6 +19,8 @@
   }
 
   &__list {
+    font-size: 1.5rem;
+    font-weight: 100;
     list-style: none;
     border: spacing(0.2) solid color('gray');
 
@@ -32,5 +31,10 @@
 
   &__text {
     border: spacing(0.2) solid color('gray');
+  }
+
+  &__button {
+    font-size: 1.5rem;
+    font-weight: 100;
   }
 }
