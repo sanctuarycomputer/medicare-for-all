@@ -1,0 +1,18 @@
+/*
+Spacing
+*/
+@function spacing($units) {
+  @return $units * 0.25rem;
+}
+
+$spacer: (
+  '0': spacing(0),
+  's': spacing(2),
+  'm': spacing(4),
+  'l': spacing(8),
+  'xl': spacing(16)
+);
+
+@function spacer($spacing-name) {
+  @return map-get($spacer, $spacing-name);
+}

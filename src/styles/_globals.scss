@@ -11,3 +11,15 @@
 .sans-serif {
   font-family: $font-sans-serif;
 }
+
+.content-width {
+  max-width: 82.5rem;
+}
+
+.shadow {
+  box-shadow: spacing(1) spacing(1) spacing(1) rgba(97, 97, 97, 0.24);
+}
+
+.shadow-light {
+  box-shadow: spacing(1) spacing(1) spacing(1) rgba(97, 97, 97, 0.171);
+}
