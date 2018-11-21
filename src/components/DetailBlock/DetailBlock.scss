@@ -37,4 +37,12 @@
       min-width: spacing(70);
     }
   }
+
+  &__logo {
+    display: block;
+
+    @media ($medium-up) {
+      display: none;
+    }
+  }
 }
