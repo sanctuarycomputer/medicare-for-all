@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "apollo-boost": "^0.1.10",
+    "apollo-cache-inmemory": "^1.2.5",
+    "apollo-client": "^2.3.5",
+    "apollo-link-http": "1.5.5",
     "basement": "https://github.com/sanctuarycomputer/basement.git",
+    "graphql": "^14.0.2",
     "lodash": "^4.17.11",
     "node-sass": "^4.9.4",
     "prop-types": "^15.6.2",
