@@ -1,1 +1,9 @@
 @import '~basement/src/index', 'globals', 'reset';
+
+.App {
+  -webkit-animation: fadein $transition-duration;
+  -moz-animation: fadein $transition-duration;
+  -ms-animation: fadein $transition-duration;
+  -o-animation: fadein $transition-duration;
+  animation: fadein $transition-duration;
+}
