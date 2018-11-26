@@ -10,7 +10,7 @@ class DetailBlock extends Component {
         <img 
           className='col-12 md:col-9 fit-contain my1' 
           src='/assets/image-shirt-detail-1.jpg' 
-          alt='shirt detail image'
+          alt='shirt detail'
         />
         <div 
           className={cx(styles['DetailBlock__image-group-container'], 
@@ -26,9 +26,9 @@ class DetailBlock extends Component {
             </p>
           </div>
           <div className={cx(styles['DetailBlock__image2-container'], 'col-12 md:col-8 my1')}>
-            <img className={cx(styles['DetailBlock__image2'], 'col-12 md:col-9 right fit-contain z0 shadow-light')} src='/assets/image-shirt-detail-2.jpg' alt='shirt detail image' />
+            <img className={cx(styles['DetailBlock__image2'], 'col-12 md:col-9 right fit-contain z0 shadow-light')} src='/assets/image-shirt-detail-2.jpg' alt='shirt detail' />
           </div>
-          <img className={cx(styles['DetailBlock__image3'], 'col-12 md:col-4 z1 w100 h100 fit-contain shadow-light my1')} src='/assets/image-shirt-detail-3.jpg' alt='shirt detail image' />
+          <img className={cx(styles['DetailBlock__image3'], 'col-12 md:col-4 z1 w100 h100 fit-contain shadow-light my1')} src='/assets/image-shirt-detail-3.jpg' alt='shirt detail' />
         </div>
         <div className='w100 relative flex flex-col md:flex-row-reverse md:justify-between md:items-start md:mt4'>
           <div className='col-12 md:col-5'>
@@ -55,7 +55,10 @@ class DetailBlock extends Component {
               </p>
             </div>
           </div>
-          <img className={cx(styles['DetailBlock__image4'], 'col-12 md:col-5 fit-contain shadow-light my1 md:mx2')} src='/assets/image-shirt-detail-4.jpg' alt='shirt detail image' />
+          <img className={cx(styles['DetailBlock__image4'], 'col-12 md:col-5 fit-contain shadow-light my1 md:mx2')} src='/assets/image-shirt-detail-4.jpg' alt='shirt detail' />
+        </div>
+        <div className={cx(styles['DetailBlock__logo'], 'w100')}>
+          <img className='col-12 my4' src='/assets/sanctu-compu-logo.svg' alt='Sanctuary Computer Logo' />
         </div>
       </div>
     );
