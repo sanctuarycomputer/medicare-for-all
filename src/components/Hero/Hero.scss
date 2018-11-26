@@ -1,6 +1,10 @@
 @import 'settings';
 
 .Hero {
+  &__logo {
+    top: 50%;
+  }
+
   &__circle {
     @include aspect-ratio(8, 15);
     background: radial-gradient(ellipse at center, white 0%, white 60%, color('light-blue') 60%, white 70%);

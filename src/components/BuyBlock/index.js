@@ -10,7 +10,7 @@ class BuyBlock extends Component {
 
   render() {
     return (
-      <div className={cx(styles['BuyBlock'], 'p1 flex flex-col justify-center items-center mb8')}>
+      <div className={cx(styles['BuyBlock'], 'content-width mxauto relative p1 flex flex-col justify-center items-center mb8')}>
         <img
           className='col-12 md:col-9 fit-contain mt1'
           src='/assets/image-shirt-front.png'
