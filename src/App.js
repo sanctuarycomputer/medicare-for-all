@@ -3,6 +3,7 @@ import './styles/app.scss';
 
 import Hero from './components/Hero';
 import DetailBlock from './components/DetailBlock';
+import BuyBlock from './components/BuyBlock';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
       <div className='app'>
         <Hero />
         <DetailBlock />
+        <BuyBlock />
       </div>
     );
   }

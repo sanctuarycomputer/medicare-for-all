@@ -1,0 +1,40 @@
+@import 'settings';
+
+.BuyBlock {
+  &__container {
+    flex-direction: column;
+
+    @media($medium-up) {
+      flex-direction: row;
+    }
+  }
+
+  &__box {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+
+    @media ($medium-up) {
+      margin: 0;
+    }
+  }
+
+  &__list {
+    font-size: 1.5rem;
+    font-weight: 100;
+    list-style: none;
+    border: spacing(0.2) solid color('gray');
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  &__text {
+    border: spacing(0.2) solid color('gray');
+  }
+
+  &__button {
+    font-size: 1.5rem;
+    font-weight: 100;
+  }
+}
