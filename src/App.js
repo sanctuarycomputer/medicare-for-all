@@ -63,7 +63,7 @@ class App extends Component {
     if (!this.state.product) return "loading";
 
     return (
-      <div className='app'>
+      <div className='App'>
         <Hero />
         <DetailBlock />
         <BuyBlock />
