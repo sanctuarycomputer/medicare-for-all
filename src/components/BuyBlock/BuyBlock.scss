@@ -24,12 +24,17 @@
     font-weight: 100;
     list-style: none;
 
-    &-border {
+    &--border {
       border: spacing(0.2) solid color('gray');
     }
 
-    &-item {
+    &--item {
       border: spacing(0.2) solid transparent;
+
+      // &:last-of-type {
+      //   padding-right: 2rem;
+      //   padding-left: 2rem;
+      // }
 
       &:hover {
         border: spacing(0.2) solid color('light-blue');
@@ -38,17 +43,13 @@
     }
   }
 
-  &__text {
+  &__button {
+    font-size: 1.5rem;
+    font-weight: 100;
     border: spacing(0.2) solid color('gray');
 
     &:hover {
       border-color: color('light-blue');
-
     }
-  }
-
-  &__button {
-    font-size: 1.5rem;
-    font-weight: 100;
   }
 }

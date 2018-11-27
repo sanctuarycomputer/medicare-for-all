@@ -72,7 +72,7 @@ class App extends Component {
       <div className='App'>
         <Hero />
         <DetailBlock />
-        <BuyBlock clickHandler={this.selectSize}/>
+        <BuyBlock sizes={Object.values(Sizes)} clickHandler={this.selectSize}/>
       </div>
     );
   }

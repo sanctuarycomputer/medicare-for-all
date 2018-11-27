@@ -20,24 +20,37 @@ class BuyBlock extends Component {
           className={cx(styles['BuyBlock__container'], 'flex justify-center items-center w100')}
           onSubmit={this.handleFormSubmit}
         >
-          <div className={cx(styles['BuyBlock__box'], 'col-12 md:col-6 flex justify-center')}>
-            <div className='col-12 md:col-8'>
-              <div className={cx(styles['BuyBlock__list'], 'shadow serif flex justify-between')}>
-                <div className={cx(styles['BuyBlock__list-border'], 'overlay events-none z1')}></div>
-                <div className={cx(styles['BuyBlock__list-item'], 'px2 py1 relative z2')} onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>XS</div>
-                <div className={cx(styles['BuyBlock__list-item'], 'px2 py1 relative z2')} onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>S</div>
-                <div className={cx(styles['BuyBlock__list-item'], 'px2 py1 relative z2')} onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>M</div>
-                <div className={cx(styles['BuyBlock__list-item'], 'px2 py1 relative z2')} onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>L</div>
-                <div className={cx(styles['BuyBlock__list-item'], 'px2 py1 relative z2')} onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>XL</div>
+          <div className="col-12 md:col-6">
+            <div className={cx(styles['BuyBlock__box'], 'flex justify-center')}>
+              <div className="col-12 md:col-9">
+                <ul className={cx(styles['BuyBlock__list'], 'shadow serif bg-white flex flex-wrap justify-between')}>
+                  <div className={cx(styles['BuyBlock__list--border'], 'overlay events-none')}></div>
+                  {
+                    this.props.sizes.map(size => {
+                      return (
+                        <li
+                          className={cx(styles['BuyBlock__list--item'], 'px2 py1 relative')}
+                          onClick={(event) => {
+                            event.preventDefault()
+                            this.props.clickHandler(size)
+                          }}>
+                          {size}
+                        </li>
+                      )
+                    })
+                  }
+                </ul>
               </div>
             </div>
           </div>
-          <div className={cx(styles['BuyBlock__box'], 'col-12 md:col-6 flex justify-center')}>
-            <div className='col-12 md:col-8'>
-              <div className={cx(styles['BuyBlock__text'], 'shadow flex justify-center')}>
-                <button className={cx(styles['BuyBlock__button'], 'p1 w100')} type="sumbit">
-                  <span className="serif">BUY NOW</span>
-                </button>
+          <div className="col-12 md:col-6">
+            <div className={cx(styles['BuyBlock__box'], 'flex justify-center')}>
+              <div className='col-12 md:col-9'>
+                <div className='shadow flex justify-center'>
+                  <button className={cx(styles['BuyBlock__button'], 'p1 w100')} type="sumbit">
+                    <span className="serif">BUY NOW</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
