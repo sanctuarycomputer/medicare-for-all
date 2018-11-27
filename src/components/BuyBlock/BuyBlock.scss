@@ -19,16 +19,20 @@
   }
 
   &__list {
+    position: relative;
     font-size: 1.5rem;
     font-weight: 100;
     list-style: none;
-    border: spacing(0.2) solid color('gray');
 
-    li {
-      outline: none;
+    &-border {
+      border: spacing(0.2) solid color('gray');
+    }
+
+    &-item {
+      border: spacing(0.2) solid transparent;
 
       &:hover {
-        outline: spacing(0.2) solid color('light-blue');
+        border: spacing(0.2) solid color('light-blue');
         cursor: default;
       }
     }
@@ -39,6 +43,7 @@
 
     &:hover {
       border-color: color('light-blue');
+
     }
   }
 

@@ -22,13 +22,14 @@ class BuyBlock extends Component {
         >
           <div className={cx(styles['BuyBlock__box'], 'col-12 md:col-6 flex justify-center')}>
             <div className='col-12 md:col-8'>
-              <ul className={cx(styles['BuyBlock__list'], 'shadow serif flex justify-between')}>
-                <li className="px2 py1" onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>XS</li>
-                <li className="px2 py1" onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>S</li>
-                <li className="px2 py1" onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>M</li>
-                <li className="px2 py1" onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>L</li>
-                <li className="px2 py1" onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>XL</li>
-              </ul>
+              <div className={cx(styles['BuyBlock__list'], 'shadow serif flex justify-between')}>
+                <div className={cx(styles['BuyBlock__list-border'], 'overlay events-none z1')}></div>
+                <div className={cx(styles['BuyBlock__list-item'], 'px2 py1 relative z2')} onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>XS</div>
+                <div className={cx(styles['BuyBlock__list-item'], 'px2 py1 relative z2')} onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>S</div>
+                <div className={cx(styles['BuyBlock__list-item'], 'px2 py1 relative z2')} onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>M</div>
+                <div className={cx(styles['BuyBlock__list-item'], 'px2 py1 relative z2')} onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>L</div>
+                <div className={cx(styles['BuyBlock__list-item'], 'px2 py1 relative z2')} onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>XL</div>
+              </div>
             </div>
           </div>
           <div className={cx(styles['BuyBlock__box'], 'col-12 md:col-6 flex justify-center')}>
