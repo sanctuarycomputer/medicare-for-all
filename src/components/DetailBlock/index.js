@@ -6,12 +6,27 @@ import styles from './DetailBlock.scss';
 class DetailBlock extends Component {
   render() {
     return (
-      <div className={cx(styles['DetailBlock__content'], 'content-width mxauto relative flex flex-col items-center p2')}>
-        <img
-          className='col-12 md:col-9 fit-contain my1'
-          src='/assets/image-shirt-detail-1.jpg'
-          alt='shirt detail'
-        />
+      <div className="flex flex-col items-center p2 content-width mxauto">
+        <div className="flex items-center justify-center flex-col relative w100">
+          <div className="relative">
+          <div className="three-four">
+            <div style={{
+              backgroundImage: "url('/assets/image-shirt-detail-1.jpg')",
+              backgroundPosition: 'center',
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+            }} className={cx(styles['DetailBlock__image'], 'absolute inner')}></div>
+          </div>
+          </div>
+          <div className="three-four">
+          <div style={{
+            backgroundImage: "url('/assets/image-shirt-detail-1-hover.jpg')",
+            backgroundPosition: 'center',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+          }} className={cx(styles['DetailBlock__image'], 'absolute inner')}></div>
+          </div>
+        </div>
         <div
           className={cx(styles['DetailBlock__image-group-container'],
           'w100 relative flex flex-col items-start md:flex-row md:justify-between md:mt4')}

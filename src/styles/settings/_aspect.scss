@@ -14,3 +14,7 @@
     bottom: 0;
   }
 }
+
+.three-four {
+  @include aspect-ratio(3, 4);
+}
