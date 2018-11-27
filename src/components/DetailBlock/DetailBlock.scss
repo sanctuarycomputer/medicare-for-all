@@ -5,6 +5,11 @@
     padding-top: 100vh;
   }
 
+  &__paragraph {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
   &__text1-container {
     border: spacing(0.2) solid color('gray');
     @media ($medium-up) {
