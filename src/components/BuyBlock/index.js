@@ -12,9 +12,9 @@ class BuyBlock extends Component {
     return (
       <div className={cx(styles['BuyBlock'], 'content-width mxauto relative p1 flex flex-col justify-center items-center mb8')}>
         <img
-          className='col-12 md:col-9 fit-contain mt1'
-          src='/assets/image-shirt-front.png'
-          alt='front of shirt'
+          className='col-12 md:col-7 fit-contain mt1'
+          src={this.props.image.originalSrc}
+          alt={this.props.image.altText}
         />
         <form
           className={cx(styles['BuyBlock__container'], 'flex justify-center items-center w100')}
