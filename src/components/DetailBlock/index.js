@@ -17,11 +17,11 @@ class DetailBlock extends Component {
           'w100 relative flex flex-col items-start md:flex-row md:justify-between md:mt4')}
           >
           <div className={cx(styles['DetailBlock__text1-container'], 'col-12 md:col-3 p1 bg-white z1 shadow my1')}>
-            <p className='mb1'>Medicare for All (employees)</p>
-            <p className='mb1'>
+            <p className='serif light-weight-font mb1'>Medicare for All (employees)</p>
+            <p className='serif light-weight-font mb1'>
               In the USA, employers are only required to contribute 50% to the cost of an employee’s health insurance. In the case the employer simply meets that requirement, the remainder of the cost is syphoned out of the employee’s paycheck.
             </p>
-            <p>
+            <p className="serif light-weight-font">
               We believe healthcare is a human right, plain and simple.
             </p>
           </div>
@@ -33,7 +33,7 @@ class DetailBlock extends Component {
         <div className='w100 relative flex flex-col md:flex-row-reverse md:justify-between md:items-start md:mt4'>
           <div className='col-12 md:col-5'>
             <div className={cx(styles['DetailBlock__text2-container'], 'col-12 md:col-8 shadow p1 my1')}>
-              <p className='mb1'>
+              <p className='serif light-weight-font mb1'>
                 While we can’t change the labor laws in this
                 country, we have a responsibility to our team
                 members to create the change we want to see
@@ -43,12 +43,12 @@ class DetailBlock extends Component {
                 healthcare plans with 100% coverage,
                 indefinitely.*
               </p>
-              <p className='mb1'>
+              <p className='serif light-weight-font mb1'>
                 To offset the extra cost, we’re selling this
                 sweatshirt. And who knows, it may encourage
                 your employer to do the same... ¯\_(ツ)_/¯
               </p>
-              <p>
+              <p className="serif light-weight-font">
                 * It also means a yearly personal saving of
                 roughly between $1000 — $3000 USD,
                 (depending the plan).
