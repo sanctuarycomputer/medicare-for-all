@@ -7,24 +7,18 @@ class DetailBlock extends Component {
   render() {
     return (
       <div className="flex flex-col items-center p2 content-width mxauto">
-        <div className="flex items-center justify-center flex-col relative w100">
-          <div className="relative">
-          <div className="three-four">
-            <div style={{
-              backgroundImage: "url('/assets/image-shirt-detail-1.jpg')",
-              backgroundPosition: 'center',
-              backgroundSize: 'contain',
-              backgroundRepeat: 'no-repeat',
-            }} className={cx(styles['DetailBlock__image'], 'absolute inner')}></div>
-          </div>
-          </div>
-          <div className="three-four">
-          <div style={{
-            backgroundImage: "url('/assets/image-shirt-detail-1-hover.jpg')",
-            backgroundPosition: 'center',
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-          }} className={cx(styles['DetailBlock__image'], 'absolute inner')}></div>
+        <div className="relative col-10">
+          <div className='relative'>
+            <div className="aspect-four-three w100">
+              <div
+                style={{ backgroundImage: "url('/assets/image-shirt-detail-1-hover.jpg')" }}
+                className={cx(styles['DetailBlock__image'], 'shadow-light')}>
+              </div>
+              <div
+                style={{ backgroundImage: "url('/assets/image-shirt-detail-1.jpg')" }}
+                className={cx(styles['DetailBlock__image'], 'shadow-light')}>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -41,9 +35,35 @@ class DetailBlock extends Component {
             </p>
           </div>
           <div className={cx(styles['DetailBlock__image2-container'], 'col-12 md:col-8 my1')}>
-            <img className={cx(styles['DetailBlock__image2'], 'col-12 md:col-9 right fit-contain z0 shadow-light')} src='/assets/image-shirt-detail-2.jpg' alt='shirt detail' />
+            <div className={cx(styles['DetailBlock__image2'], 'col-12 md:col-9 right fit-contain z0 shadow-light')}>
+              <div className='relative'>
+                <div className="aspect-five-three w100">
+                  <div
+                    style={{ backgroundImage: "url('/assets/image-shirt-detail-2-hover.jpg')" }}
+                    className={cx(styles['DetailBlock__image'], 'shadow-light')}>
+                  </div>
+                  <div
+                    style={{ backgroundImage: "url('/assets/image-shirt-detail-2.jpg')" }}
+                    className={cx(styles['DetailBlock__image'], 'shadow-light')}>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <img className={cx(styles['DetailBlock__image3'], 'col-12 md:col-4 z1 w100 h100 fit-contain shadow-light my1')} src='/assets/image-shirt-detail-3.jpg' alt='shirt detail' />
+          <div className={cx(styles['DetailBlock__image3'], 'col-12 md:col-4 z1 w100 h100 fit-contain shadow-light my1 relative')}>
+            <div className='relative'>
+              <div className="aspect-three-four w100">
+                <div
+                  style={{ backgroundImage: "url('/assets/image-shirt-detail-3-hover.jpg')" }}
+                  className={cx(styles['DetailBlock__image'], 'shadow-light')}>
+                </div>
+                <div
+                  style={{ backgroundImage: "url('/assets/image-shirt-detail-3.jpg')" }}
+                  className={cx(styles['DetailBlock__image'], 'shadow-light')}>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className='w100 relative flex flex-col md:flex-row-reverse md:justify-between md:items-start md:mt4'>
           <div className='col-12 md:col-5'>
@@ -70,7 +90,20 @@ class DetailBlock extends Component {
               </p>
             </div>
           </div>
-          <img className={cx(styles['DetailBlock__image4'], 'col-12 md:col-5 fit-contain shadow-light my1 md:mx2')} src='/assets/image-shirt-detail-4.jpg' alt='shirt detail' />
+          <div className={cx(styles['DetailBlock__image4'], 'col-12 md:col-5 fit-contain shadow-light my1 md:mx2 relative')}>
+            <div className='relative'>
+              <div className="aspect-four-three w100">
+                <div
+                  style={{ backgroundImage: "url('/assets/image-shirt-detail-4-hover.jpg')" }}
+                  className={cx(styles['DetailBlock__image'], 'shadow-light')}>
+                </div>
+                <div
+                  style={{ backgroundImage: "url('/assets/image-shirt-detail-4.jpg')" }}
+                  className={cx(styles['DetailBlock__image'], 'shadow-light')}>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className={cx(styles['DetailBlock__logo'], 'w100')}>
           <img className='col-12 my4' src='/assets/sanctu-compu-logo.svg' alt='Sanctuary Computer Logo' />

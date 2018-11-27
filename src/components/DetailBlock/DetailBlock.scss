@@ -10,6 +10,17 @@
     line-height: 23px;
   }
 
+  &__image {
+    transition: opacity 1s ease-in-out;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &:hover {
+      opacity: 0;
+    }
+  }
+
   &__text1-container {
     border: spacing(0.2) solid color('gray');
     @media ($medium-up) {
