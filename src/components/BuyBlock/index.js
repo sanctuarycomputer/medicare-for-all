@@ -46,7 +46,7 @@ class BuyBlock extends Component {
           <div className="col-12 md:col-6">
             <div className={cx(styles['BuyBlock__box'], 'flex justify-center')}>
               <div className='col-12 md:col-9'>
-                <div className='shadow flex justify-center'>
+                <div className='shadow bg-white flex justify-center'>
                   <button className={cx(styles['BuyBlock__button'], 'p1 w100')} type="sumbit">
                     <span className="serif">BUY NOW</span>
                   </button>
