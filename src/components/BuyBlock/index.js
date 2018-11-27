@@ -23,11 +23,11 @@ class BuyBlock extends Component {
           <div className={cx(styles['BuyBlock__box'], 'col-12 md:col-6 flex justify-center')}>
             <div className='col-12 md:col-8'>
               <ul className={cx(styles['BuyBlock__list'], 'shadow serif px2 py1 flex justify-between')}>
-                <li>XS</li>
                 <li>S</li>
                 <li>M</li>
                 <li>L</li>
                 <li>XL</li>
+                <li>XXL</li>
               </ul>
             </div>
           </div>
