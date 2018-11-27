@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import get from "./utils/get";
 import './styles/app.scss';
 
 import Hero from './components/Hero';
 import DetailBlock from './components/DetailBlock';
 import BuyBlock from './components/BuyBlock';
 
-import ShopifyGQLClient, { 
-  fetchProducts, 
-  checkoutCreate, 
-  checkoutLineItemsAdd 
+import ShopifyGQLClient, {
+  fetchProducts,
+  checkoutCreate,
+  checkoutLineItemsAdd
 } from './lib/Apollo';
 
 const Sizes = {
@@ -42,7 +43,7 @@ class App extends Component {
   }
 
   addToCart = () => {
-    const variantId = 
+    const variantId =
       this.state.product.variants.edges.find(e => e.node.title === this.state.size).node.id;
     const lineItems = [{ variantId, quantity: 1 }];
     return ShopifyGQLClient.mutate({
@@ -66,7 +67,7 @@ class App extends Component {
       <div className='App'>
         <Hero />
         <DetailBlock />
-        <BuyBlock />
+        <BuyBlock image={get(this.state.product, "images.edges[0].node", {})}/>
       </div>
     );
   }
