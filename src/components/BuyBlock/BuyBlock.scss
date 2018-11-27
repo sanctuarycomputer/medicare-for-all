@@ -25,12 +25,21 @@
     border: spacing(0.2) solid color('gray');
 
     li {
-      display: inline-block;
+      outline: none;
+
+      &:hover {
+        outline: spacing(0.2) solid color('light-blue');
+        cursor: default;
+      }
     }
   }
 
   &__text {
     border: spacing(0.2) solid color('gray');
+
+    &:hover {
+      border-color: color('light-blue');
+    }
   }
 
   &__button {

@@ -16,13 +16,17 @@ const Sizes = {
   SMALL: "S",
   MEDIUM: "M",
   LARGE: "L",
-  EXTRA_LARGE: "XL"
+  EXTRA_LARGE: "XL",
+  DOUBLE_EXTRA_LARGE: "XXL"
 };
 
 class App extends Component {
   constructor() {
     super(...arguments);
     this.state = { product: null, size: Sizes.MEDIUM }
+
+    this.selectSize = this.selectSize.bind(this);
+
   }
 
   componentWillMount() {
@@ -39,6 +43,7 @@ class App extends Component {
     if (!Object.values(Sizes).includes(size)) {
       throw new Error("Unsupported Size");
     }
+
     this.setState({ size });
   }
 
@@ -67,7 +72,7 @@ class App extends Component {
       <div className='App'>
         <Hero />
         <DetailBlock />
-        <BuyBlock image={get(this.state.product, "images.edges[0].node", {})}/>
+        <BuyBlock clickHandler={this.selectSize}/>
       </div>
     );
   }

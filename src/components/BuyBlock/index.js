@@ -22,19 +22,19 @@ class BuyBlock extends Component {
         >
           <div className={cx(styles['BuyBlock__box'], 'col-12 md:col-6 flex justify-center')}>
             <div className='col-12 md:col-8'>
-              <ul className={cx(styles['BuyBlock__list'], 'shadow serif px2 py1 flex justify-between')}>
-                <li>S</li>
-                <li>M</li>
-                <li>L</li>
-                <li>XL</li>
-                <li>XXL</li>
+              <ul className={cx(styles['BuyBlock__list'], 'shadow serif flex justify-between')}>
+                <li className="px2 py1" onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>XS</li>
+                <li className="px2 py1" onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>S</li>
+                <li className="px2 py1" onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>M</li>
+                <li className="px2 py1" onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>L</li>
+                <li className="px2 py1" onClick={(event) => this.props.clickHandler(event.currentTarget.textContent)}>XL</li>
               </ul>
             </div>
           </div>
           <div className={cx(styles['BuyBlock__box'], 'col-12 md:col-6 flex justify-center')}>
             <div className='col-12 md:col-8'>
               <div className={cx(styles['BuyBlock__text'], 'shadow flex justify-center')}>
-                <button className={cx(styles['BuyBlock__button'], 'px1 py1 w100')} type="sumbit">
+                <button className={cx(styles['BuyBlock__button'], 'p1 w100')} type="sumbit">
                   <span className="serif">BUY NOW</span>
                 </button>
               </div>
