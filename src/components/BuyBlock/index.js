@@ -47,7 +47,7 @@ class BuyBlock extends Component {
                 <div className="col-6 flex flex-col">
                   <label className={cx(styles['BuyBlock__label'], 'serif light-weight-font bg-white flex items-center justify-center')} >QUANTITY:</label>
                   <input
-                    className={cx(styles['BuyBlock__number-input'], 'serif text-center w100 h100')} type="number" min="1" placeholder={1}
+                    className={cx(styles['BuyBlock__number-input'], 'serif light-weight-font text-center w100 h100')} type="number" min="1" placeholder={1}
                     onChange={e => {
                       e.preventDefault();
                       this.props.inputChange(e.target.value)
