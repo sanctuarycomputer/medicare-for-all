@@ -24,9 +24,6 @@ class App extends Component {
   constructor() {
     super(...arguments);
     this.state = { product: null, size: Sizes.MEDIUM }
-
-    this.selectSize = this.selectSize.bind(this);
-
   }
 
   componentWillMount() {
@@ -39,7 +36,7 @@ class App extends Component {
     });
   }
 
-  selectSize(size) {
+  selectSize = size => {
     if (!Object.values(Sizes).includes(size)) {
       throw new Error("Unsupported Size");
     }

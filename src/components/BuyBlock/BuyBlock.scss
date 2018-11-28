@@ -32,7 +32,9 @@
       border: spacing(0.2) solid transparent;
 
       &:hover {
-        border: spacing(0.2) solid color('light-blue');
+        border: spacing(0.2) solid color('navy');
+        background-color: color('dark-navy');
+        color: color('white');
         cursor: default;
       }
     }
@@ -44,7 +46,9 @@
     border: spacing(0.2) solid color('gray');
 
     &:hover {
-      border-color: color('light-blue');
+      border-color: color('navy');
+      background-color: color('dark-navy');
+      color: color('white');
     }
   }
 }
