@@ -68,6 +68,7 @@ class BuyBlock extends Component {
                     onChange={e => {
                       e.preventDefault();
                       this.props.inputChange(e.target.value)
+                      this.props.calculatePrice(e.target.value)
                     }}
                     >
                   </input>
@@ -76,11 +77,14 @@ class BuyBlock extends Component {
                 <div className="col-9">
                   <button className={cx(styles['BuyBlock__button'], 'bg-white px1 py1 w100')} type="sumbit">
                     <span className="serif">{this.props.buttonText} - ${this.props.price}</span>
+<<<<<<< HEAD
 =======
                 <div className="col-6">
                   <button className={cx(styles['BuyBlock__button'], 'bg-white px1 py1 w100')} type="sumbit">
                     <span className="serif">{this.props.buttonText}</span>
 >>>>>>> change button load state, implememt quantity selector
+=======
+>>>>>>> add calculate total price func in app.js
                   </button>
                 </div>
               </div>

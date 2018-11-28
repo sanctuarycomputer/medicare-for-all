@@ -23,13 +23,9 @@ const Sizes = {
 class App extends Component {
   constructor() {
     super(...arguments);
-<<<<<<< HEAD
-    this.state = { product: null, size: Sizes.MEDIUM, buttonText: "BUY NOW", quantity: 1, price: 0 }
-=======
-    this.state = { product: null, size: Sizes.MEDIUM, buttonText: "BUY NOW", quantity: 0 }
 
-    this.selectQuantity = this.selectQuantity.bind(this);
->>>>>>> change button load state, implememt quantity selector
+    this.state = { product: null, size: Sizes.MEDIUM, buttonText: "BUY NOW", quantity: 1, price: 0 }
+
   }
 
   componentWillMount() {
@@ -56,6 +52,16 @@ class App extends Component {
   }
 
   calculateTotalPrice = quantity => {
+    let total = 0;
+    for (let variant of this.state.product.variants.edges) {
+      if (variant.node.title === this.state.size) {
+        total += Number(variant.node.price) * Number(quantity);
+      }
+    }
+    this.setState({ price: total.toFixed(2) })
+  }
+
+  calculateTotalPrice = (quantity) => {
     let total = 0;
     for (let variant of this.state.product.variants.edges) {
       if (variant.node.title === this.state.size) {
@@ -108,7 +114,12 @@ class App extends Component {
           buttonText={this.state.buttonText}
           formSubmit={this.addToCart}
           inputChange={this.selectQuantity}
+<<<<<<< HEAD
 >>>>>>> change button load state, implememt quantity selector
+=======
+          calculatePrice={this.calculateTotalPrice}
+          price={this.state.price}
+>>>>>>> add calculate total price func in app.js
         />
       </div>
     );
