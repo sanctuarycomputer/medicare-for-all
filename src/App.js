@@ -50,7 +50,7 @@ class App extends Component {
     this.setState({ quantity })
   }
 
-  addToCart = (quant) => {
+  addToCart = () => {
     this.setState({
       buttonText: "LOADING...",
     })
