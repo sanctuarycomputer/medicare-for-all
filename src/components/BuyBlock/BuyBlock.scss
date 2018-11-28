@@ -52,4 +52,17 @@
       color: color('white');
     }
   }
+
+  &__number-input {
+    outline: none;
+    border: none;
+    height: 50%;
+    border-right: spacing(0.2) solid color('gray');
+    border-radius: 0;
+  }
+
+  &__label {
+    border-right: spacing(0.2) solid color('gray');
+    height: 50%;
+  }
 }

@@ -3,11 +3,6 @@ import cx from 'classnames';
 import styles from './BuyBlock.scss';
 
 class BuyBlock extends Component {
-  handleFormSubmit(event) {
-    event.preventDefault();
-    // buy stuff
-  }
-
   render() {
     return (
       <div className={cx(styles['BuyBlock'], 'content-width mxauto relative p1 flex flex-col justify-center items-center mb8')}>
@@ -18,7 +13,10 @@ class BuyBlock extends Component {
         />
         <form
           className={cx(styles['BuyBlock__container'], 'flex justify-center items-center w100')}
-          onSubmit={this.handleFormSubmit}
+          onSubmit={(event) => {
+            event.preventDefault();
+            this.props.formSubmit();
+          }}
         >
           <div className="col-12 md:col-6">
             <div className={cx(styles['BuyBlock__box'], 'flex justify-center')}>
@@ -43,12 +41,23 @@ class BuyBlock extends Component {
               </div>
             </div>
           </div>
-          <div className="col-12 md:col-6">
-            <div className={cx(styles['BuyBlock__box'], 'flex justify-center')}>
-              <div className='col-12 md:col-9'>
-                <div className='shadow bg-white flex justify-center'>
-                  <button className={cx(styles['BuyBlock__button'], 'pointer p1 w100')} type="sumbit">
-                    <span className="serif">BUY NOW</span>
+          <div className={cx(styles['BuyBlock__box'], 'col-12 md:col-6 flex justify-center')}>
+            <div className='col-12 md:col-8'>
+              <div className={cx(styles['BuyBlock__text'], 'shadow flex justify-center')}>
+                <div className="col-6 flex flex-col">
+                  <label className={cx(styles['BuyBlock__label'], 'serif light-weight-font bg-white flex items-center justify-center')} >QUANTITY:</label>
+                  <input
+                    className={cx(styles['BuyBlock__number-input'], 'serif text-center w100 h100')} type="number" min="1" placeholder={1}
+                    onChange={e => {
+                      e.preventDefault();
+                      this.props.inputChange(e.target.value)
+                    }}
+                    >
+                  </input>
+                </div>
+                <div className="col-6">
+                  <button className={cx(styles['BuyBlock__button'], 'bg-white px1 py1 w100')} type="sumbit">
+                    <span className="serif">{this.props.buttonText}</span>
                   </button>
                 </div>
               </div>

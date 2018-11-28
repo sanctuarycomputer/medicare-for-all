@@ -23,7 +23,9 @@ const Sizes = {
 class App extends Component {
   constructor() {
     super(...arguments);
-    this.state = { product: null, size: Sizes.MEDIUM }
+    this.state = { product: null, size: Sizes.MEDIUM, buttonText: "BUY NOW", quantity: 0 }
+
+    this.selectQuantity = this.selectQuantity.bind(this);
   }
 
   componentWillMount() {
@@ -44,10 +46,18 @@ class App extends Component {
     this.setState({ size });
   }
 
-  addToCart = () => {
+  selectQuantity(quantity) {
+    this.setState({ quantity })
+  }
+
+  addToCart = (quant) => {
+    this.setState({
+      buttonText: "LOADING...",
+    })
+
     const variantId =
       this.state.product.variants.edges.find(e => e.node.title === this.state.size).node.id;
-    const lineItems = [{ variantId, quantity: 1 }];
+    const lineItems = [{ variantId, quantity: Number(this.state.quantity) }];
     return ShopifyGQLClient.mutate({
       mutation: checkoutCreate,
       variables: { input: {} }
@@ -74,6 +84,9 @@ class App extends Component {
           sizes={Object.values(Sizes)}
           clickHandler={this.selectSize}
           size={this.state.size}
+          buttonText={this.state.buttonText}
+          formSubmit={this.addToCart}
+          inputChange={this.selectQuantity}
         />
       </div>
     );
