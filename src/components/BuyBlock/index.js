@@ -23,13 +23,13 @@ class BuyBlock extends Component {
           <div className="col-12 md:col-6">
             <div className={cx(styles['BuyBlock__box'], 'flex justify-center')}>
               <div className="col-12 md:col-9">
-                <ul className={cx(styles['BuyBlock__list'], 'shadow serif bg-white flex flex-wrap justify-between')}>
+                <ul className={cx(styles['BuyBlock__list'], 'shadow serif bg-white flex flex-wrap justify-center')}>
                   <div className={cx(styles['BuyBlock__list--border'], 'overlay events-none')}></div>
                   {
                     this.props.sizes.map(size => {
                       return (
                         <li
-                          className={cx(styles['BuyBlock__list--item'], 'px2 py1 relative')}
+                          className={cx(styles['BuyBlock__list--item'], 'p1 text-center relative')}
                           onClick={(event) => {
                             event.preventDefault()
                             this.props.clickHandler(size)
