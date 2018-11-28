@@ -23,7 +23,13 @@ const Sizes = {
 class App extends Component {
   constructor() {
     super(...arguments);
+<<<<<<< HEAD
     this.state = { product: null, size: Sizes.MEDIUM, buttonText: "BUY NOW", quantity: 1, price: 0 }
+=======
+    this.state = { product: null, size: Sizes.MEDIUM, buttonText: "BUY NOW", quantity: 0 }
+
+    this.selectQuantity = this.selectQuantity.bind(this);
+>>>>>>> change button load state, implememt quantity selector
   }
 
   componentWillMount() {
@@ -89,6 +95,7 @@ class App extends Component {
         <DetailBlock />
         <BuyBlock
           image={get(this.state.product, "images.edges[0].node", {})}
+<<<<<<< HEAD
           sizes={Object.values(Sizes)}
           clickHandler={this.selectSize}
           size={this.state.size}
@@ -97,6 +104,11 @@ class App extends Component {
           inputChange={this.selectQuantity}
           price={this.state.price}
           quantity={this.state.quantity}
+=======
+          buttonText={this.state.buttonText}
+          formSubmit={this.addToCart}
+          inputChange={this.selectQuantity}
+>>>>>>> change button load state, implememt quantity selector
         />
       </div>
     );
