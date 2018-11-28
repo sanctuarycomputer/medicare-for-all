@@ -23,7 +23,7 @@ const Sizes = {
 class App extends Component {
   constructor() {
     super(...arguments);
-    this.state = { product: null, size: Sizes.MEDIUM, buttonText: "BUY NOW", quantity: 1 }
+    this.state = { product: null, size: Sizes.MEDIUM, buttonText: "BUY NOW", quantity: 1, price: "34.50" }
   }
 
   componentWillMount() {
