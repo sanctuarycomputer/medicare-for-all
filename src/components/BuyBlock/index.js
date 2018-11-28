@@ -3,6 +3,15 @@ import cx from 'classnames';
 import styles from './BuyBlock.scss';
 
 class BuyBlock extends Component {
+
+  componentDidMount() {
+    document.getElementById("input").addEventListener("keypress", function (evt) {
+      if (evt.which < 48 || evt.which > 57) {
+        evt.preventDefault();
+      }
+    });
+  }
+
   render() {
     return (
       <div className={cx(styles['BuyBlock'], 'content-width mxauto relative p1 flex flex-col justify-center items-center mb8')}>
@@ -46,6 +55,7 @@ class BuyBlock extends Component {
               <div className={cx(styles['BuyBlock__text'], 'shadow flex justify-center')}>
                 <div className="col-3 flex flex-col">
                   <input
+                    id="input"
                     className={cx(styles['BuyBlock__number-input'], 'h100 serif light-weight-font text-center w100 h100')}
                     type="number" min="1" placeholder={1} pattern="[0-9]*"
                     onChange={e => {
