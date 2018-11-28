@@ -29,7 +29,7 @@ class BuyBlock extends Component {
                     this.props.sizes.map(size => {
                       return (
                         <li
-                          className={cx(styles['BuyBlock__list--item'], 'p1 text-center relative')}
+                          className={cx(styles['BuyBlock__list--item'], 'pointer p1 text-center relative')}
                           onClick={(event) => {
                             event.preventDefault()
                             this.props.clickHandler(size)
@@ -47,7 +47,7 @@ class BuyBlock extends Component {
             <div className={cx(styles['BuyBlock__box'], 'flex justify-center')}>
               <div className='col-12 md:col-9'>
                 <div className='shadow bg-white flex justify-center'>
-                  <button className={cx(styles['BuyBlock__button'], 'p1 w100')} type="sumbit">
+                  <button className={cx(styles['BuyBlock__button'], 'pointer p1 w100')} type="sumbit">
                     <span className="serif">BUY NOW</span>
                   </button>
                 </div>
