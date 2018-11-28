@@ -23,9 +23,7 @@ const Sizes = {
 class App extends Component {
   constructor() {
     super(...arguments);
-    this.state = { product: null, size: Sizes.MEDIUM, buttonText: "BUY NOW", quantity: 0 }
-
-    this.selectQuantity = this.selectQuantity.bind(this);
+    this.state = { product: null, size: Sizes.MEDIUM, buttonText: "BUY NOW", quantity: 1 }
   }
 
   componentWillMount() {
@@ -46,13 +44,13 @@ class App extends Component {
     this.setState({ size });
   }
 
-  selectQuantity(quantity) {
+  selectQuantity = quantity => {
     this.setState({ quantity })
   }
 
   addToCart = () => {
     this.setState({
-      buttonText: "LOADING...",
+      buttonText: "loading...",
     })
 
     const variantId =
@@ -74,7 +72,6 @@ class App extends Component {
 
   render() {
     if (!this.state.product) return "loading";
-
     return (
       <div className='App'>
         <Hero />
