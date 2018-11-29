@@ -23,7 +23,7 @@ const Sizes = {
 class App extends Component {
   constructor() {
     super(...arguments);
-    this.state = { product: null, size: Sizes.MEDIUM, buttonText: "BUY NOW", quantity: 1, price: "34.50" }
+    this.state = { product: null, size: Sizes.MEDIUM, buttonText: "BUY NOW", quantity: 1, price: 0 }
   }
 
   componentWillMount() {
@@ -33,6 +33,8 @@ class App extends Component {
       this.setState({
         product: data.shop.products.edges.find(e => e.node.handle === "m4a-jersey").node
       });
+    }).then(() => {
+      this.calculateTotalPrice(this.state.quantity)
     });
   }
 
@@ -42,10 +44,12 @@ class App extends Component {
     }
 
     this.setState({ size });
+    this.calculateTotalPrice(this.state.quantity)
   }
 
   selectQuantity = quantity => {
     this.setState({ quantity })
+    this.calculateTotalPrice(quantity)
   }
 
   addToCart = () => {
@@ -84,6 +88,8 @@ class App extends Component {
           buttonText={this.state.buttonText}
           formSubmit={this.addToCart}
           inputChange={this.selectQuantity}
+          price={this.state.price}
+          quantity={this.state.quantity}
         />
       </div>
     );
