@@ -69,7 +69,11 @@ class App extends Component {
       <div className='App'>
         <Hero />
         <DetailBlock />
-        <BuyBlock sizes={Object.values(Sizes)} clickHandler={this.selectSize}/>
+        <BuyBlock
+          sizes={Object.values(Sizes)}
+          clickHandler={this.selectSize}
+          size={this.state.size}
+        />
       </div>
     );
   }

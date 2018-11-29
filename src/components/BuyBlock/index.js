@@ -29,7 +29,7 @@ class BuyBlock extends Component {
                     this.props.sizes.map(size => {
                       return (
                         <li
-                          className={cx(styles['BuyBlock__list--item'], 'pointer p1 text-center relative')}
+                          className={cx(styles['BuyBlock__list--item'], 'pointer p1 text-center relative', {'BuyBlock__list--item--selected___13RyP': this.props.size === size})}
                           onClick={(event) => {
                             event.preventDefault()
                             this.props.clickHandler(size)
