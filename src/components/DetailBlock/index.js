@@ -6,7 +6,7 @@ import styles from './DetailBlock.scss';
 class DetailBlock extends Component {
   render() {
     return (
-      <div className="flex flex-col items-center p2 content-width mxauto">
+      <div className={cx(styles['DetailBlock__content'], 'flex flex-col items-center p2 content-width mxauto')}>
         <div className="relative col-10">
           <div className='relative'>
             <div className="aspect-four-three w100">
