@@ -5,6 +5,7 @@ import './styles/app.scss';
 import Hero from './components/Hero';
 import DetailBlock from './components/DetailBlock';
 import BuyBlock from './components/BuyBlock';
+import ScrollToTop from './components/ScrollToTop';
 
 import ShopifyGQLClient, {
   fetchProducts,
@@ -121,6 +122,7 @@ class App extends Component {
           price={this.state.price}
 >>>>>>> add calculate total price func in app.js
         />
+        <ScrollToTop scrollStepInPx="75" delayInMs="10" />
       </div>
     );
   }
