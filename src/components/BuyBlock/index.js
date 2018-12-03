@@ -5,8 +5,9 @@ import styles from './BuyBlock.scss';
 class BuyBlock extends Component {
 
   componentDidMount() {
-    document.getElementById('input').addEventListener('keydown', function (e) {
-      if (e.key === '.' || 'Decimal' ) {
+    document.getElementById('input').addEventListener('keypress', function (e) {
+      console.log(e.key);
+      if (e.key === '.') {
         e.preventDefault()
       }
     });
