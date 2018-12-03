@@ -20,23 +20,37 @@ class BuyBlock extends Component {
           className={cx(styles['BuyBlock__container'], 'flex justify-center items-center w100')}
           onSubmit={this.handleFormSubmit}
         >
-          <div className={cx(styles['BuyBlock__box'], 'col-12 md:col-6 flex justify-center')}>
-            <div className='col-12 md:col-8'>
-              <ul className={cx(styles['BuyBlock__list'], 'shadow serif px2 py1 flex justify-between')}>
-                <li>S</li>
-                <li>M</li>
-                <li>L</li>
-                <li>XL</li>
-                <li>XXL</li>
-              </ul>
+          <div className="col-12 md:col-6">
+            <div className={cx(styles['BuyBlock__box'], 'flex justify-center')}>
+              <div className="col-12 md:col-9">
+                <ul className={cx(styles['BuyBlock__list'], 'shadow serif bg-white flex flex-wrap justify-center')}>
+                  <div className={cx(styles['BuyBlock__list--border'], 'overlay events-none')}></div>
+                  {
+                    this.props.sizes.map(size => {
+                      return (
+                        <li
+                          className={cx(styles['BuyBlock__list--item'], 'pointer p1 text-center relative', {'BuyBlock__list--item--selected___13RyP': this.props.size === size})}
+                          onClick={(event) => {
+                            event.preventDefault()
+                            this.props.clickHandler(size)
+                          }}>
+                          {size}
+                        </li>
+                      )
+                    })
+                  }
+                </ul>
+              </div>
             </div>
           </div>
-          <div className={cx(styles['BuyBlock__box'], 'col-12 md:col-6 flex justify-center')}>
-            <div className='col-12 md:col-8'>
-              <div className={cx(styles['BuyBlock__text'], 'shadow flex justify-center')}>
-                <button className={cx(styles['BuyBlock__button'], 'px1 py1 w100')} type="sumbit">
-                  <span className="serif">BUY NOW</span>
-                </button>
+          <div className="col-12 md:col-6">
+            <div className={cx(styles['BuyBlock__box'], 'flex justify-center')}>
+              <div className='col-12 md:col-9'>
+                <div className='shadow bg-white flex justify-center'>
+                  <button className={cx(styles['BuyBlock__button'], 'pointer p1 w100')} type="sumbit">
+                    <span className="serif">BUY NOW</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

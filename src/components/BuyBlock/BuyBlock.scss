@@ -19,22 +19,37 @@
   }
 
   &__list {
+    position: relative;
     font-size: 1.5rem;
     font-weight: 100;
     list-style: none;
-    border: spacing(0.2) solid color('gray');
 
-    li {
-      display: inline-block;
+    &--border {
+      border: spacing(0.2) solid color('gray');
+    }
+
+    &--item {
+      border: spacing(0.2) solid transparent;
+      width: 20%;
+      font-size: 1.2rem;
+
+      &:hover, &--selected {
+        border: spacing(0.2) solid color('light-navy');
+        background-color: color('navy');
+        color: color('white');
+      }
     }
   }
 
-  &__text {
-    border: spacing(0.2) solid color('gray');
-  }
-
   &__button {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 100;
+    border: spacing(0.2) solid color('gray');
+
+    &:hover {
+      border-color: color('light-navy');
+      background-color: color('navy');
+      color: color('white');
+    }
   }
 }
