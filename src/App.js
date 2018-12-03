@@ -17,7 +17,7 @@ const Sizes = {
   MEDIUM: "M",
   LARGE: "L",
   EXTRA_LARGE: "XL",
-  DOUBLE_EXTRA_LARGE: "XXL"
+  DOUBLE_EXTRA_LARGE: "2XL"
 };
 
 class App extends Component {
@@ -34,7 +34,7 @@ class App extends Component {
         product: data.shop.products.edges.find(e => e.node.handle === "m4a-jersey").node
       });
     }).then(() => {
-      this.calculateTotalPrice(this.state.quantity)
+      this.calculateTotalPrice(this.state.quantity);
     });
   }
 
@@ -42,14 +42,11 @@ class App extends Component {
     if (!Object.values(Sizes).includes(size)) {
       throw new Error("Unsupported Size");
     }
-
-    this.setState({ size });
-    this.calculateTotalPrice(this.state.quantity)
+    this.setState({ size }, () => this.calculateTotalPrice(this.state.quantity));
   }
 
   selectQuantity = quantity => {
-    this.setState({ quantity })
-    this.calculateTotalPrice(quantity)
+    this.setState({ quantity }, () => this.calculateTotalPrice(quantity));
   }
 
   calculateTotalPrice = quantity => {

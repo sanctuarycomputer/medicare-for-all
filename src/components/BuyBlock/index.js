@@ -56,8 +56,8 @@ class BuyBlock extends Component {
                 <div className="col-3 flex flex-col">
                   <input
                     id="input"
-                    className={cx(styles['BuyBlock__number-input'], 'h100 serif light-weight-font text-center w100 h100')}
-                    type="number" min="1" placeholder={1} pattern="[0-9]*"
+                    className={cx(styles['BuyBlock__number-input'], 'serif light-weight-font p0 text-center w100 h100')}
+                    type="number" min="1" value={this.props.quantity} pattern="[0-9]*"
                     onChange={e => {
                       e.preventDefault();
                       this.props.inputChange(e.target.value)
@@ -67,7 +67,7 @@ class BuyBlock extends Component {
                 </div>
                 <div className="col-9">
                   <button className={cx(styles['BuyBlock__button'], 'bg-white px1 py1 w100')} type="sumbit">
-                    <span className="serif">{this.props.buttonText}</span>
+                    <span className="serif">{this.props.buttonText} - ${this.props.price}</span>
                   </button>
                 </div>
               </div>
