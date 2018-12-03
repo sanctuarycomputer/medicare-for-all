@@ -17,13 +17,13 @@ const Sizes = {
   MEDIUM: "M",
   LARGE: "L",
   EXTRA_LARGE: "XL",
-  DOUBLE_EXTRA_LARGE: "XXL"
+  DOUBLE_EXTRA_LARGE: "2XL"
 };
 
 class App extends Component {
   constructor() {
     super(...arguments);
-    this.state = { product: null, size: Sizes.MEDIUM }
+    this.state = { product: null, size: Sizes.MEDIUM, buttonText: "BUY NOW", quantity: 1, price: 0 }
   }
 
   componentWillMount() {
@@ -33,6 +33,8 @@ class App extends Component {
       this.setState({
         product: data.shop.products.edges.find(e => e.node.handle === "m4a-jersey").node
       });
+    }).then(() => {
+      this.calculateTotalPrice(this.state.quantity);
     });
   }
 
@@ -40,14 +42,31 @@ class App extends Component {
     if (!Object.values(Sizes).includes(size)) {
       throw new Error("Unsupported Size");
     }
+    this.setState({ size }, () => this.calculateTotalPrice(this.state.quantity));
+  }
 
-    this.setState({ size });
+  selectQuantity = quantity => {
+    this.setState({ quantity }, () => this.calculateTotalPrice(quantity));
+  }
+
+  calculateTotalPrice = quantity => {
+    let total = 0;
+    for (let variant of this.state.product.variants.edges) {
+      if (variant.node.title === this.state.size) {
+        total += Number(variant.node.price) * Number(quantity);
+      }
+    }
+    this.setState({ price: total.toFixed(2) })
   }
 
   addToCart = () => {
+    this.setState({
+      buttonText: "loading...",
+    })
+
     const variantId =
       this.state.product.variants.edges.find(e => e.node.title === this.state.size).node.id;
-    const lineItems = [{ variantId, quantity: 1 }];
+    const lineItems = [{ variantId, quantity: Number(this.state.quantity) }];
     return ShopifyGQLClient.mutate({
       mutation: checkoutCreate,
       variables: { input: {} }
@@ -64,7 +83,6 @@ class App extends Component {
 
   render() {
     if (!this.state.product) return "loading";
-
     return (
       <div className='App'>
         <Hero />
@@ -74,6 +92,11 @@ class App extends Component {
           sizes={Object.values(Sizes)}
           clickHandler={this.selectSize}
           size={this.state.size}
+          buttonText={this.state.buttonText}
+          formSubmit={this.addToCart}
+          inputChange={this.selectQuantity}
+          price={this.state.price}
+          quantity={this.state.quantity}
         />
       </div>
     );

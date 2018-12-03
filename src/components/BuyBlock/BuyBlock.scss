@@ -41,15 +41,26 @@
     }
   }
 
+  &__text {
+    border: spacing(0.4) solid color('gray');
+  }
+
   &__button {
     font-size: 1.2rem;
     font-weight: 100;
-    border: spacing(0.2) solid color('gray');
 
     &:hover {
       border-color: color('light-navy');
       background-color: color('navy');
       color: color('white');
     }
+  }
+
+  &__number-input {
+    outline: none;
+    border: none;
+    border-right: spacing(0.4) solid color('gray');
+    border-radius: 0;
+    font-size: 1.2rem;
   }
 }
