@@ -5,9 +5,9 @@ import styles from './BuyBlock.scss';
 class BuyBlock extends Component {
 
   componentDidMount() {
-    document.getElementById("input").addEventListener("keypress", function (evt) {
-      if (evt.which < 48 || evt.which > 57) {
-        evt.preventDefault();
+    document.getElementById('input').addEventListener('keydown', function (e) {
+      if (e.key === '.' ) {
+        e.preventDefault()
       }
     });
   }

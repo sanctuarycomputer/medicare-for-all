@@ -52,6 +52,16 @@ class App extends Component {
     this.calculateTotalPrice(quantity)
   }
 
+  calculateTotalPrice = quantity => {
+    let total = 0;
+    for (let variant of this.state.product.variants.edges) {
+      if (variant.node.title === this.state.size) {
+        total += Number(variant.node.price) * Number(quantity);
+      }
+    }
+    this.setState({ price: total.toFixed(2) })
+  }
+
   addToCart = () => {
     this.setState({
       buttonText: "loading...",
