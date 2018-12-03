@@ -70,6 +70,7 @@ class App extends Component {
         <Hero />
         <DetailBlock />
         <BuyBlock
+          image={get(this.state.product, "images.edges[0].node", {})}
           sizes={Object.values(Sizes)}
           clickHandler={this.selectSize}
           size={this.state.size}
