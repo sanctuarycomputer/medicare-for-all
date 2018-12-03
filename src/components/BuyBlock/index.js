@@ -6,7 +6,7 @@ class BuyBlock extends Component {
 
   componentDidMount() {
     document.getElementById('input').addEventListener('keydown', function (e) {
-      if (e.key === '.' ) {
+      if (e.key === '.' || 'Decimal' ) {
         e.preventDefault()
       }
     });
