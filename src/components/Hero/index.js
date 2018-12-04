@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import cx from 'classnames';
 import styles from './Hero.scss';
 
+import MedicareLogo from 'components/MedicareLogo';
+import ForAllLogo from 'components/ForAllLogo';
+import SanctuLogo from 'components/SanctuLogo';
+
 class Hero extends Component {
   render() {
     return (
@@ -10,10 +14,16 @@ class Hero extends Component {
           <div className={cx(styles['Hero__circle'], 'fixed w100')}/>
         </div>
         <div className='absolute fixed t0 w100 h100 flex flex-col items-center justify-center'>
-          <img className='col-10 my4' src='/assets/image-medicare.svg' alt='medicare'/>
-          <img className='col-6 my4' src='/assets/image-for-all.svg' alt='for all'/>
+          <div className='col-10 my4'>
+            <MedicareLogo />
+          </div>
+          <div className="col-6 my4">
+            <ForAllLogo />
+          </div>
         </div>
-        <img className={cx(styles['Hero__logo'], 'absolute col-2 none lg:block' )} src='/assets/sanctu-compu-logo.svg' alt='sanctuary computer logo' />
+        <div className={cx(styles['Hero__logo'], 'absolute col-2 none lg:block')}>
+          <SanctuLogo />
+        </div>
       </div>
     );
   }
