@@ -95,7 +95,7 @@ class App extends Component {
   }
 
   render() {
-    if (!this.state.product) return "loading";
+    if (!this.state.product) return null;
     return (
       <div className='App'>
         <Hero />
