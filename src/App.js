@@ -102,7 +102,6 @@ class App extends Component {
         <DetailBlock />
         <BuyBlock
           image={get(this.state.product, "images.edges[0].node", {})}
-<<<<<<< HEAD
           sizes={Object.values(Sizes)}
           clickHandler={this.selectSize}
           size={this.state.size}
@@ -111,16 +110,6 @@ class App extends Component {
           inputChange={this.selectQuantity}
           price={this.state.price}
           quantity={this.state.quantity}
-=======
-          buttonText={this.state.buttonText}
-          formSubmit={this.addToCart}
-          inputChange={this.selectQuantity}
-<<<<<<< HEAD
->>>>>>> change button load state, implememt quantity selector
-=======
-          calculatePrice={this.calculateTotalPrice}
-          price={this.state.price}
->>>>>>> add calculate total price func in app.js
         />
         <ScrollToTop scrollStepInPx="75" delayInMs="10" />
       </div>

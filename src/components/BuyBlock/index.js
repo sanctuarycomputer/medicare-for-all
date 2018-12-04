@@ -53,38 +53,21 @@ class BuyBlock extends Component {
           <div className={cx(styles['BuyBlock__box'], 'col-12 md:col-6 flex justify-center')}>
             <div className='col-12 md:col-8'>
               <div className={cx(styles['BuyBlock__text'], 'shadow flex justify-center')}>
-<<<<<<< HEAD
                 <div className="col-3 flex flex-col">
                   <input
                     id="input"
                     className={cx(styles['BuyBlock__number-input'], 'serif light-weight-font p0 text-center w100 h100')}
                     type="number" min="1" value={this.props.quantity} pattern="[0-9]*"
-=======
-                <div className="col-6 flex flex-col">
-                  <label className={cx(styles['BuyBlock__label'], 'serif light-weight-font bg-white flex items-center justify-center')} >QUANTITY:</label>
-                  <input
-                    className={cx(styles['BuyBlock__number-input'], 'serif text-center w100 h100')} type="number" min="1" placeholder={1}
->>>>>>> change button load state, implememt quantity selector
                     onChange={e => {
                       e.preventDefault();
                       this.props.inputChange(e.target.value)
-                      this.props.calculatePrice(e.target.value)
                     }}
                     >
                   </input>
                 </div>
-<<<<<<< HEAD
                 <div className="col-9">
                   <button className={cx(styles['BuyBlock__button'], 'bg-white px1 py1 w100')} type="sumbit">
                     <span className="serif">{this.props.buttonText} - ${this.props.price}</span>
-<<<<<<< HEAD
-=======
-                <div className="col-6">
-                  <button className={cx(styles['BuyBlock__button'], 'bg-white px1 py1 w100')} type="sumbit">
-                    <span className="serif">{this.props.buttonText}</span>
->>>>>>> change button load state, implememt quantity selector
-=======
->>>>>>> add calculate total price func in app.js
                   </button>
                 </div>
               </div>
