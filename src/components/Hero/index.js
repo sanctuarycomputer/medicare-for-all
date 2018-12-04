@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import cx from 'classnames';
 import styles from './Hero.scss';
 
-import MedicareLogo from 'components/MedicareLogo';
-import ForAllLogo from 'components/ForAllLogo';
-import SanctuLogo from 'components/SanctuLogo';
+import MedicareLogo from 'components/Logos/MedicareLogo';
+import ForAllLogo from 'components/Logos/ForAllLogo';
+import SanctuLogo from 'components/Logos/SanctuLogo';
 
 class Hero extends Component {
   render() {

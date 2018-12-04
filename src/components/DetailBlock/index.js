@@ -3,7 +3,7 @@ import cx from 'classnames';
 
 import styles from './DetailBlock.scss';
 
-import SanctuLogo from 'components/SanctuLogo';
+import SanctuLogo from 'components/Logos/SanctuLogo';
 
 class DetailBlock extends Component {
   render() {
