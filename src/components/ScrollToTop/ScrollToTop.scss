@@ -1,0 +1,11 @@
+@import 'settings';
+
+.ScrollToTop {
+  &__button {
+    bottom: spacing(4);
+    right: spacing(4);
+    border: spacing(.02) solid color('gray');
+    font-size: 1.2rem;
+    animation: fadein $transition-duration;
+  }
+}

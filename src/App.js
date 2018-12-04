@@ -5,6 +5,7 @@ import './styles/app.scss';
 import Hero from './components/Hero';
 import DetailBlock from './components/DetailBlock';
 import BuyBlock from './components/BuyBlock';
+import ScrollToTop from './components/ScrollToTop';
 
 import ShopifyGQLClient, {
   fetchProducts,
@@ -23,7 +24,9 @@ const Sizes = {
 class App extends Component {
   constructor() {
     super(...arguments);
+
     this.state = { product: null, size: Sizes.MEDIUM, buttonText: "BUY NOW", quantity: 1, price: 0 }
+
   }
 
   componentWillMount() {
@@ -50,6 +53,16 @@ class App extends Component {
   }
 
   calculateTotalPrice = quantity => {
+    let total = 0;
+    for (let variant of this.state.product.variants.edges) {
+      if (variant.node.title === this.state.size) {
+        total += Number(variant.node.price) * Number(quantity);
+      }
+    }
+    this.setState({ price: total.toFixed(2) })
+  }
+
+  calculateTotalPrice = (quantity) => {
     let total = 0;
     for (let variant of this.state.product.variants.edges) {
       if (variant.node.title === this.state.size) {
@@ -98,6 +111,7 @@ class App extends Component {
           price={this.state.price}
           quantity={this.state.quantity}
         />
+        <ScrollToTop scrollStepInPx="75" delayInMs="10" />
       </div>
     );
   }
