@@ -45,7 +45,7 @@ class ScrollToTop extends Component {
       return (
         <div className={cx(styles['ScrollToTop'])}>
           <button
-            className={cx(styles['ScrollToTop__button'], 'p1 z3 shadow fixed overflow-hidden flex items-center justify-center text-center')}
+            className={cx(styles['ScrollToTop__button'], 'pointer p1 z3 shadow fixed overflow-hidden flex items-center justify-center text-center')}
             onClick={() => {this.scrollToTop();}}>
             <span className="serif light-weight-font">To Top</span>
           </button>
