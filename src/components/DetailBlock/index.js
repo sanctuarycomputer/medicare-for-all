@@ -3,6 +3,8 @@ import cx from 'classnames';
 
 import styles from './DetailBlock.scss';
 
+import SanctuLogo from 'components/Logos/SanctuLogo';
+
 class DetailBlock extends Component {
   render() {
     return (
@@ -106,7 +108,9 @@ class DetailBlock extends Component {
           </div>
         </div>
         <div className={cx(styles['DetailBlock__logo'], 'w100 z1')}>
-          <img className='col-12 my4' src='/assets/sanctu-compu-logo.svg' alt='Sanctuary Computer Logo' />
+          <div className='col-12 my4'>
+            <SanctuLogo />
+          </div>
         </div>
       </div>
     );
