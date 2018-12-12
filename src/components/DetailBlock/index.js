@@ -75,10 +75,9 @@ class DetailBlock extends Component {
                 country, we have a responsibility to our team
                 members to create the change we want to see
                 in our own environment — and for that reason,
-                starting November 2018, Sanctuary Computer
-                is committed to offering at least one of our
-                healthcare plans with 100% coverage,
-                indefinitely.*
+                Sanctuary Computer is committed to offering at 
+                least one of our healthcare plans with 100% 
+                coverage, indefinitely.*
               </p>
               <p className={cx(styles['DetailBlock__paragraph'], 'serif light-weight-font mb2')}>
                 To offset the extra cost, we’re selling this
@@ -86,9 +85,8 @@ class DetailBlock extends Component {
                 your employer to do the same... ¯\_(ツ)_/¯
               </p>
               <p className={cx(styles['DetailBlock__paragraph'], 'serif light-weight-font')}>
-                * It also means a yearly personal saving of
-                roughly between $1000 — $3000 USD,
-                (depending the plan).
+                * It also means an annual personal saving of
+                between $1000 — $3000 USD, depending on the plan.
               </p>
             </div>
           </div>

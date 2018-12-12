@@ -25,11 +25,11 @@
     list-style: none;
 
     &--border {
-      border: spacing(0.2) solid color('gray');
+      border: 1px solid color('gray');
     }
 
     &--item {
-      border: spacing(0.2) solid transparent;
+      border: 1px solid transparent;
       width: 20%;
       font-size: 1.2rem;
 
@@ -42,7 +42,7 @@
   }
 
   &__text {
-    border: spacing(0.2) solid color('gray');
+    border: 1px solid color('gray');
   }
 
   &__button {
@@ -59,7 +59,7 @@
   &__number-input {
     outline: none;
     border: none;
-    border-right: spacing(0.2) solid color('gray');
+    border-right: 1px solid color('gray');
     border-radius: 0;
     font-size: 1.2rem;
   }
