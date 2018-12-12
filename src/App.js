@@ -31,16 +31,7 @@ class App extends Component {
       buttonText: "BUY NOW", 
       quantity: 1, 
       price: 0,
-      blurred: false
     }
-  }
-
-  blurBackground = () => {
-    this.setState({ blurred: true });
-  }
-
-  unblurBackground = () => {
-    this.setState({ blurred: false });
   }
 
   componentWillMount() {
@@ -124,8 +115,6 @@ class App extends Component {
           inputChange={this.selectQuantity}
           price={this.state.price}
           quantity={this.state.quantity}
-          blurBackground={this.blurBackground}
-          unblurBackground={this.unblurBackground}
         />
         <ScrollToTop scrollStepInPx="75" delayInMs="10" />
       </div>

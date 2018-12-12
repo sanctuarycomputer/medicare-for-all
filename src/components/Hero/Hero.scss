@@ -1,14 +1,8 @@
 @import 'settings';
 
 .Hero {
-  transition: 250ms ease-in-out;
-
   &__logo {
     top: 50%;
-  }
-
-  &__blurred {
-    opacity: 0.4;
   }
 
   &__circle {
