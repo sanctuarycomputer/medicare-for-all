@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import cx from 'classnames';
 import styles from './BuyBlock.scss';
+import Waypoint from 'react-waypoint';
 
 class BuyBlock extends Component {
+  state = { blurred: false }
 
   componentDidMount() {
     document.getElementById('input').addEventListener('keypress', function (e) {
@@ -12,9 +14,21 @@ class BuyBlock extends Component {
     });
   }
 
+  _handleWaypointEnter() {
+    this.setState({ blurred: true });
+  }
+
+  _handleWaypointLeave() {
+    this.setState({ blurred: true });
+  }
+
   render() {
     return (
       <div className={cx(styles['BuyBlock'], 'content-width mxauto relative p1 flex flex-col justify-center items-center mb8')}>
+        <Waypoint
+          onEnter={this.props.blurBackground}
+          onLeave={this.props.unblurBackground}
+        />
         <img
           className='col-12 md:col-7 fit-contain mt1'
           src={this.props.image.originalSrc}
