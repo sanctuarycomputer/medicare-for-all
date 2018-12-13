@@ -30,7 +30,7 @@ class DetailBlock extends Component {
           <div className={cx(styles['DetailBlock__text1-container'], 'col-12 md:col-3 p1 bg-white z1 shadow my1')}>
             <p className={cx(styles['DetailBlock__paragraph'], 'serif light-weight-font mb2')}>Medicare for All (employees)</p>
             <p className={cx(styles['DetailBlock__paragraph'], 'serif light-weight-font mb2')}>
-              In the USA, employers are only required to contribute 50% to the cost of an employee’s health insurance. In the case the employer simply meets that requirement, the remainder of the cost is syphoned out of the employee’s paycheck.
+              In the USA, employers are only required to contribute 50% to the cost of an employee’s health insurance. In the case the employer simply meets that requirement, the remainder of the cost is siphoned out of the employee’s paycheck.
             </p>
             <p className={cx(styles['DetailBlock__paragraph'], 'serif light-weight-font')}>
               We believe healthcare is a human right, plain and simple.
